@@ -4,6 +4,12 @@
     IN5AM
     Fecha de creación:
     05/07/2023
+    Fecha de modificación:
+    06/07/2023
+		Se modificó la entidad TipoEmpleado;
+        el atributo bonificación empresa se
+        colocó como not null y un default de
+        Q.250.00
     
 */
 
@@ -50,7 +56,7 @@ CREATE TABLE TipoEmpleado(
     descripcion VARCHAR(100),
     sueldoBase DOUBLE NOT NULL,
     bonificacion DOUBLE,
-    bonificacionEmpresa DOUBLE,
+    bonificacionEmpresa DOUBLE NOT NULL DEFAULT 250.00,
     PRIMARY KEY PK_codigoTipoEmpleado (codigoTipoEmpleado)
 );
 
@@ -89,8 +95,8 @@ CREATE TABLE Cliente(
 
 CREATE TABLE Venta(
 	codigoVenta INT NOT NULL AUTO_INCREMENT,
-    fechaVenta DATE NOT NULL DEFAULT (CURRENT_DATE),
-    horaVenta TIME NOT NULL DEFAULT (CURRENT_TIME),
+    fechaVenta DATE NOT NULL,
+    horaVenta TIME NOT NULL,
     totalVenta DOUBLE NOT NULL,
     estadoVenta BOOLEAN NOT NULL DEFAULT TRUE,
     codigoEmpleado INT NOT NULL,
