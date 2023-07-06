@@ -119,17 +119,6 @@ CREATE TABLE Compra(
 		REFERENCES Proveedor (codigoProveedor)
 );
 
-CREATE TABLE DetalleCompra(
-	codigoDetalleCompra INT NOT NULL AUTO_INCREMENT,
-    codigoVehiculo INT NOT NULL,
-    cantidad INT NOT NULL,
-    precio DOUBLE NOT NULL,
-    codigoCompra INT NOT NULL,
-    PRIMARY KEY PK_codigoDetalleCompra (codigoDetalleCompra),
-    CONSTRAINT FK_DetalleCompra_Compra FOREIGN KEY (codigoCompra)
-     REFERENCES Compra (codigoCompra)
-);
-
 CREATE TABLE Vehiculo(
 	codigoVehiculo INT NOT NULL AUTO_INCREMENT,
     marca VARCHAR(45) NOT NULL,
@@ -143,6 +132,21 @@ CREATE TABLE Vehiculo(
     CONSTRAINT FK_Vehiculo_TipoVehiculo FOREIGN KEY (codigoTipoVehiculo)
 		REFERENCES TipoVehiculo (codigoTipoVehiculo)
 );
+
+CREATE TABLE DetalleCompra(
+	codigoDetalleCompra INT NOT NULL AUTO_INCREMENT,
+    codigoVehiculo INT NOT NULL,
+    cantidad INT NOT NULL,
+    precio DOUBLE NOT NULL,
+    codigoCompra INT NOT NULL,
+    PRIMARY KEY PK_codigoDetalleCompra (codigoDetalleCompra),
+    CONSTRAINT FK_DetalleCompra_Compra FOREIGN KEY (codigoCompra)
+		REFERENCES Compra (codigoCompra),
+	CONSTRAINT FK_DetalleCompra_Vehiculo FOREIGN KEY (codigoVehiculo)
+		REFERENCES Vehiculo (codigoVehiculo)
+);
+
+
 
 CREATE TABLE DetalleVenta(
 	codigoDetalleVenta INT NOT NULL AUTO_INCREMENT,
@@ -166,9 +170,6 @@ CREATE TABLE Sucursal_has_Compra(
 	CONSTRAINT FK_Sucursal_has_Compra_Compra FOREIGN KEY (codigoCompra)
 		REFERENCES compra (codigoCompra)
 );
-
-
-
 
 
 
