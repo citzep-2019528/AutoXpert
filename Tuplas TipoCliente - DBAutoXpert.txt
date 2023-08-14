@@ -1,0 +1,10 @@
+insert into TipoCliente(tipoCliente, descripcion) 
+	values ('Ocasional','Cliente que es su primera vez comprando autos o no compra autos muy frecuentemente.');
+insert into TipoCliente(tipoCliente, descripcion) 
+	values ('Regular','Cliente que ha comprado algunos autos anteriormente y realiza visitas cada cierto tiempo.');
+insert into TipoCliente(tipoCliente, descripcion) 
+	values ('Frecuente', 'Cliente que ya ha comprado variedad de autos anteriormente.');
+insert into TipoCliente(tipoCliente, descripcion) 
+	values ('Fiel','Cliente que lleva una cantidad de tiempo considerable comprando autos frecuentemente.' );
+insert into TipoCliente(tipoCliente, descripcion) 
+	values ('Mayorista','Cliente que compra una cantidad de autos considerable cada vez que nos visita');
