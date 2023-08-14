@@ -1,0 +1,10 @@
+insert into TipoVehiculo(categoria, descripcion) 
+	values('Sedán','Color negro, cuatro puertas');
+insert into TipoVehiculo(categoria, descripcion) 
+	values('Sedán','Color Verde obscuro, dos puertas');
+insert into TipoVehiculo(categoria, descripcion) 
+	values('Hatchback','Color gris, cuatro puertas');
+insert into TipoVehiculo(categoria, descripcion) 
+	values('Hatchback','Color Blanco, dos puertas');
+insert into TipoVehiculo(categoria, descripcion) 
+	values('Convertible','Color rojo, dos puertas');
