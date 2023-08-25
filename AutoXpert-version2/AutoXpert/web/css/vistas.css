@@ -1,0 +1,29 @@
+.btn-custom-agregar{
+    background-color: #ffa420;
+    color: #fff;
+}
+
+.btn-custom-agregar:hover{
+    background-color: #ff8000;
+    color: #fff;
+}
+
+.btn-custom-actualizar{
+    background: #3b83bd;
+    color: #fff;
+}
+
+.btn-custom-actualizar:hover{
+    background: #00008B;
+    color: #fff;
+}
+
+.btn-custom-editar{
+    background: #9c9c9c;
+    color: #fff ;
+}
+
+.btn-custom-editar:hover{
+    background: #4B4B4B;
+    color: #fff;
+}
