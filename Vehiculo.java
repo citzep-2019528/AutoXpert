@@ -1,5 +1,7 @@
 package modelo;
 
+import java.io.InputStream;
+
 /**
  *
  * @author Joshua Elí Isaac Realiquez Sosa
@@ -14,23 +16,29 @@ public class Vehiculo {
     private String modelo;
     private String color;
     private int cantidadPuertas;
+    private double precio;
     private int stock;
+    private InputStream imagen;
     private boolean estadoVehiculo;
     private int codigoTipoVehiculo;
     
     public Vehiculo(){}
 
-    public Vehiculo(int codigoVehiculo, String marca, String modelo, String color, int cantidadPuertas, int stock, boolean estadoVehiculo, int codigoTipoVehiculo) {
+    public Vehiculo(int codigoVehiculo, String marca, String modelo, String color, int cantidadPuertas, double precio, int stock, InputStream imagen, boolean estadoVehiculo, int codigoTipoVehiculo) {
         this.codigoVehiculo = codigoVehiculo;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.cantidadPuertas = cantidadPuertas;
+        this.precio = precio;
         this.stock = stock;
+        this.imagen = imagen;
         this.estadoVehiculo = estadoVehiculo;
         this.codigoTipoVehiculo = codigoTipoVehiculo;
     }
 
+    
+    
     public int getCodigoVehiculo() {
         return codigoVehiculo;
     }
@@ -71,12 +79,28 @@ public class Vehiculo {
         this.cantidadPuertas = cantidadPuertas;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
     public int getStock() {
         return stock;
     }
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public InputStream getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(InputStream imagen) {
+        this.imagen = imagen;
     }
 
     public boolean isEstadoVehiculo() {
@@ -95,6 +119,15 @@ public class Vehiculo {
         this.codigoTipoVehiculo = codigoTipoVehiculo;
     }
 
+    
+    
+    @Override
+    public String toString() {
+        return codigoVehiculo + "| " + marca + ", " + modelo;
+    }
+
+    
+    
     
     
     
